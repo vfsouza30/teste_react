@@ -1,0 +1,107 @@
+[
+    {
+        "id": 1,
+        "nome": "Ford Mustang",
+        "potencia": 450,
+        "vel_maxima": 250,
+        "aceleracao": 4.3
+    },
+    {
+        "id": 2,
+        "nome": "Chevrolet Camaro",
+        "potencia": 455,
+        "vel_maxima": 290,
+        "aceleracao": 4.0
+    },
+    {
+        "id": 3,
+        "nome": "Honda Civic",
+        "potencia": 180,
+        "vel_maxima": 220,
+        "aceleracao": 7.2
+    },
+    {
+        "id": 4,
+        "nome": "Toyota Corolla",
+        "potencia": 169,
+        "vel_maxima": 210,
+        "aceleracao": 8.0
+    },
+    {
+        "id": 5,
+        "nome": "Volkswagen Golf",
+        "potencia": 150,
+        "vel_maxima": 220,
+        "aceleracao": 8.5
+    },
+    {
+        "id": 6,
+        "nome": "BMW Série 3",
+        "potencia": 255,
+        "vel_maxima": 250,
+        "aceleracao": 5.6
+    },
+    {
+        "id": 7,
+        "nome": "Audi A4",
+        "potencia": 201,
+        "vel_maxima": 240,
+        "aceleracao": 6.5
+    },
+    {
+        "id": 8,
+        "nome": "Mercedes-Benz Classe C",
+        "potencia": 255,
+        "vel_maxima": 250,
+        "aceleracao": 5.9
+    },
+    {
+        "id": 9,
+        "nome": "Tesla Model S",
+        "potencia": 670,
+        "vel_maxima": 250,
+        "aceleracao": 2.4
+    },
+    {
+        "id": 10,
+        "nome": "Nissan Altima",
+        "potencia": 188,
+        "vel_maxima": 220,
+        "aceleracao": 7.3
+    },
+    {
+        "id": 11,
+        "nome": "Hyundai Elantra",
+        "potencia": 147,
+        "vel_maxima": 205,
+        "aceleracao": 8.4
+    },
+    {
+        "id": 12,
+        "nome": "Kia Optima",
+        "potencia": 178,
+        "vel_maxima": 210,
+        "aceleracao": 7.6
+    },
+    {
+        "id": 13,
+        "nome": "Subaru Impreza",
+        "potencia": 152,
+        "vel_maxima": 210,
+        "aceleracao": 8.4
+    },
+    {
+        "id": 14,
+        "nome": "Mazda3",
+        "potencia": 186,
+        "vel_maxima": 215,
+        "aceleracao": 7.2
+    },
+    {
+        "id": 15,
+        "nome": "Dodge Charger",
+        "potencia": 292,
+        "vel_maxima": 260,
+        "aceleracao": 6.4
+    }
+]

@@ -1,0 +1,15 @@
+.acoes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.acoes button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100px;
+    height: 30px;
+    margin: 10px;
+}

@@ -1,0 +1,16 @@
+.tabuleiro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.tabuleiro h2{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.tabuleiro .card{
+    width: 200px;
+}

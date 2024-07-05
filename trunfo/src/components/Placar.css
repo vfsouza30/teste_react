@@ -1,0 +1,69 @@
+body {
+    font-family: Arial;
+    background-color: #f4f4f4;
+    padding: 30px;
+    color: #333;
+    background-position: center;
+}
+
+.placar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.placar-row{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.jogador1,
+.jogador2 {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+}
+
+.jogador1 p,
+.jogador2 p {
+    margin: 0;
+}
+
+.turno {
+    width: 100px;
+    height: 100px;    
+    background-color: #fff;    
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);   
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.turno p {
+    margin: 0;
+    padding: 5px 0;
+}
+
+.historico{
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    position: absolute;
+    right: 10px;
+}
