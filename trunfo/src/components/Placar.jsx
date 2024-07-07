@@ -55,7 +55,7 @@ const Placar = (
                                 {
                                     h.ganhadorTurno === "Jogador 1"
                                         ? (
-                                            <div>
+                                            <div className="historico-partida">
                                                 <span>{h.jogador1.nome}</span>
                                                 <span>
                                                     X

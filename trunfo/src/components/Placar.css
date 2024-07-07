@@ -103,6 +103,10 @@ body {
 
 }
 
+.historico-partida{
+    background-color: #f7f7f7;
+}
+
 @media (max-width: 768px) {
     .placar{
         display: block;
