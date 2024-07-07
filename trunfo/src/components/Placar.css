@@ -68,7 +68,7 @@ body {
     overflow: hidden;
     transition: max-height 0.3s ease;
     position: relative;
-    left: 12%;
+    left: 10%;
     width: 400px;
     display: flex;
     align-items: center;
@@ -105,6 +105,8 @@ body {
 
 .historico-partida{
     background-color: #f7f7f7;
+    margin-top: 5px;
+    margin-bottom: 8px;
 }
 
 @media (max-width: 768px) {

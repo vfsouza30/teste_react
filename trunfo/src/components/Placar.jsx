@@ -70,7 +70,7 @@ const Placar = (
                                             </div>
                                         )
                                         : (
-                                            <div>
+                                            <div className="historico-partida">
                                                 <span>{h.jogador2.nome}</span>
                                                 <span>
                                                     X
