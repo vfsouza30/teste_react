@@ -2,26 +2,42 @@ import React from "react";
 import './Tabuleiro.css';
 import './Cards.css'
 
-const Tabuleiro = ({ informacoes, posicaoJogador }) => {
+const Tabuleiro = ({ cartasMesa }) => {
 
-    const renderizarChaveValor = (chave, valor) => `${chave}: ${valor}`;
-    const entradasJogada = Object.entries(informacoes);
-
+    const enumTipo = {
+      potencia:'Potência',
+      vel_maxima:'Val. Maxima',
+      aceleracao:'Aceleração'
+    };
+    
     return (
-        <div className="tabuleiro">
-            <div>
-                {
-                    Object
-                        .keys(informacoes)
-                        .length > 0 && (
-                            <div className="card">
-                                <h5>{informacoes.nome}</h5>
-                                <h5>{renderizarChaveValor(entradasJogada[2][0], entradasJogada[2][1])}</h5>
-                            </div>
-                        )
-                }
 
-                
+        <div className="tabuleiro">
+          
+            <div >
+                {
+                    cartasMesa
+                        ?.jogador1
+                            ?.id && <div>
+                                    <div className="card">
+                                        <h5>Jogador 1</h5>
+                                        <h5>{cartasMesa?.jogador1?.nome}</h5>
+                                        <h5>{enumTipo[cartasMesa.tipoAtributo] + ": " + cartasMesa.jogador1[cartasMesa.tipoAtributo]}</h5>
+                                    </div>
+                                </div>
+
+                }
+                {
+                    cartasMesa
+                        ?.jogador2
+                            ?.id && <div>
+                                    <div className="card">
+                                        <h5>Jogador 2</h5>
+                                        <h5>{cartasMesa?.jogador2?.nome}</h5>
+                                        <h5>{enumTipo[cartasMesa.tipoAtributo] + ": " + cartasMesa.jogador2[cartasMesa.tipoAtributo]}</h5>
+                                    </div>
+                                </div>
+                }
             </div>
         </div>
     );

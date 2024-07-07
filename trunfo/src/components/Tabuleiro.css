@@ -12,5 +12,13 @@
 }
 
 .tabuleiro .card{
-    width: 200px;
+    width: 300px;
+    height: 150px;
+}
+
+@media (max-width: 768px) {
+    .tabuleiro .card {
+        width: 100%;
+        height: auto;
+    }
 }

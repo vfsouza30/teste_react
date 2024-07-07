@@ -1,0 +1,10 @@
+To-do
+
+[X] Bloquear a alteração de cartas enquanto o jogo não finalizar 
+[X] Deixar o oponente escolher apenas o mesmo atributo (Se escolher outro, mostrar um toast falando que não pode)
+[X] Mostrar qual jogador ta jogando 
+[X] Após um resultado, somar em "Turno"
+[X] Cada turno, validar se o jogador tem 10 cartas (Assim que sair o resultado)
+[X] Todas as cartas ganhas, colocar na mão do ganhador (se empatar, as cartas voltam)
+[X] Mostrar o histórico da partida atual
+[X] Responsividade

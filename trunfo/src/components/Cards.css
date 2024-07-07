@@ -1,13 +1,14 @@
-.cards{
+.cards {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 10px;
     justify-content: end;
 }
 
-.card{
+.card {
     background-color: #fff;
     padding: 5px;
+    margin-bottom: 10px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     display: flex;
@@ -16,6 +17,21 @@
     flex-direction: column;
 }
 
-.card button{
+.card button {
     margin: 2px;
+}
+
+@media (max-width: 768px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .card h4 {
+        text-align: center;
+    }
 }

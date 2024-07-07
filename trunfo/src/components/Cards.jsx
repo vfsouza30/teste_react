@@ -1,63 +1,67 @@
-import React, { useState, useEffect } from "react";
 import './Cards.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import Tabuleiro from "./Tabuleiro";
-import Jogador from "./Jogador";
 
-const Cards = ({ cardsMao, setPosicaoJogador, posicaoJogador }) => {
-    const [botaoClicado, setBotaoClicado] = useState({ cardId: null, buttonType: null });
-    const [informacoes, setInformacoes] = useState([]);
+const Cards = ({
+    cardsMao,
+    setCardsMao,
+    setTmpTurno,
+    tmpTurno,
+    posicaoJogador
+}) => {
 
     const clique = async (carro, tipoBotao) => {
+
+        if (
+            !!tmpTurno
+                ?.tipoAtributo && tipoBotao !== tmpTurno.tipoAtributo
+        ) 
+            return alert("Tipo de atributo não pode ser combinado!");
         
-        setBotaoClicado({ cardId: carro.id, buttonType: tipoBotao });
+        const novoTurno = posicaoJogador === 1
+            ? {
+                jogador1: cardsMao.find((card) => card.id === carro.id)
 
-        await new Promise(resolve => setTimeout(resolve, 1000));
+            }
+            : {
+                jogador2: cardsMao.find((card) => card.id === carro.id)
+            }
 
-        const info = {
-            id: carro.id,
-            nome: carro.nome,
-            [tipoBotao]: carro[tipoBotao]
-        };
+        setTmpTurno((old) => ({
+            ...old,
+            ...novoTurno,
+            tipoAtributo: tipoBotao
+        }));
 
-        setInformacoes(info);
+        await new Promise(resolve => setTimeout(resolve, 600));
+        setCardsMao(cardsMao.filter((card) => card.id !== carro.id));
 
-        if(posicaoJogador == 1){
-            setPosicaoJogador(2)
-        }else{
-            setPosicaoJogador(1)
-        }
     };
+
     return (
         <div>
-            { <Tabuleiro informacoes={informacoes} posicaoJogador={posicaoJogador} />}
+            <Tabuleiro cartasMesa={tmpTurno}/>
             <div className="cards">
-                {cardsMao.map((carro) => (
-                    <div className="card" key={carro.id}>
-                        <h4>{carro.nome}</h4>
-                        <button
-                            className={`btn ${botaoClicado.cardId === carro.id && botaoClicado.buttonType === 'potencia' ? 'btn-success' : 'btn-primary'}`}
-                            onClick={() => clique(carro, 'potencia')}
-                        >
-                            Potência: {carro.potencia}
-                        </button>
-                        <button
-                            className={`btn ${botaoClicado.cardId === carro.id && botaoClicado.buttonType === 'vel_maxima' ? 'btn-success' : 'btn-primary'}`}
-                            onClick={() => clique(carro, 'vel_maxima')}
-                        >
-                            Vel. Máxima: {carro.vel_maxima} km/h
-                        </button>
-                        <button
-                            className={`btn ${botaoClicado.cardId === carro.id && botaoClicado.buttonType === 'aceleracao' ? 'btn-success' : 'btn-primary'}`}
-                            onClick={() => clique(carro, 'aceleracao')}
-                        >
-                            Aceleração: {carro.aceleracao} km/h
-                        </button>
-                    </div>
-                ))}
+                {
+                    cardsMao.map((carro) => (
+                        <div className="card" key={carro.id}>
+                            <h4>{carro.nome}</h4>
+                            <button className="btn btn-primary" onClick={() => clique(carro, 'potencia')}>
+                                Potência: {carro.potencia}
+                            </button>
+                            <button className="btn btn-primary" onClick={() => clique(carro, 'vel_maxima')}>
+                                Vel. Máxima: {carro.vel_maxima}
+                                km/h
+                            </button>
+                            <button className="btn btn-primary" onClick={() => clique(carro, 'aceleracao')}>
+                                Aceleração: {carro.aceleracao}
+                                km/h
+                            </button>
+                        </div>
+                    ))
+                }
             </div>
         </div>
-        
     );
 };
 
